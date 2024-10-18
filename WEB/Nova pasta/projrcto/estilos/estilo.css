@@ -1,0 +1,105 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+
+}
+@font-face {
+    font-family: 'font1';
+    src: url(../fontes/fonte\ \(1\).otf
+    ) ;
+}
+@font-face{
+    font-family: 'font2';
+    src: url(../fontes/fonte\ \(2\).ttf);
+}
+@font-face {
+    font-family: 'font3';
+    src: url(../fontes/fonte\ \(3\).ttf);
+}
+@font-face{
+    font-family:'font4';
+    src: url(../fontes/fonte\ \(4\).ttf);
+}
+body{
+    background-color: #a5a5a577;
+}
+/*Formatando o cabeçário*/
+header{
+    padding: 20px;
+}
+header>h1{
+    display: inline-block;
+    text-shadow: 2px 2px 2px #00000001;
+    font-family: 'font3';
+    font-size: 2em;
+    color: #000;
+    margin-left: 50px;
+}
+header>menu{
+    margin-top: 18px;
+    margin-right: 10px;
+    display: inline-block;
+    float: right;
+}
+header>menu>a{
+    padding: 10px;
+    color: #777777;
+    font-weight: 500;
+}
+header>menu>a:hover{
+    font-weight: 600px;
+    color: black;
+}
+/*Formatando o cabeçário*/
+
+
+/*Formatação do main*/
+main>div{
+    display: inline-block;
+    width: 40%;
+    padding: 10px;
+    margin: 50px 10px;
+
+}
+main>div#img{
+    height: 400px;
+    background-image: url('../imagens/dada.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main>div#cont{
+    width: 50%;
+    float: right;
+
+}
+main>div>h1{
+    font-size: 2.5em;
+    font-weight: 700;
+    margin-bottom: 13px;
+}
+main>div>p{
+    font-size: 700;
+    color: #777777;
+    margin-bottom: 40px;
+}
+main>div>h2{
+    margin-bottom: 40px;
+}
+main>div>a{
+    color: #757575;
+    font-weight: 500;
+    border: 2px solid rgb(255, 255, 255);
+    padding: 15px 50px;
+}
+main>div>a:hover{
+    color: black;
+    font-weight: 500px;
+    background-color: #b3b3b3;
+}
+/*Formatação do main*/

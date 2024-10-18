@@ -1,0 +1,107 @@
+﻿@charset "UTF-8";
+
+@font-face{
+    font-family: 'sira';
+    src: url('../font/Sira-regular.ttf') format('truetype');
+    font-weight: normal;
+}
+/*Configurações Globais*/
+*{
+    padding: 0px;
+    margin:0px;
+}
+html,body{
+    min-height: 100vh;
+    background-color: gray;
+}
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: verdana;
+}
+a:hover{
+    text-decoration: underline;
+}
+
+/*Configurações Globais*/
+
+/*Configurações do cabeçario*/
+header{
+    background-color: black;
+
+}
+header h1{
+    font-family:'Perpetua Titling MT';
+    font-size: 8vw;
+    font-weight: lighter;
+    font-variant: small-caps;
+    padding-top: 50px;
+    color: white;
+    text-align: center;
+}
+header p{
+    color: gray;
+    text-align: center;
+    padding-bottom: 50px;
+    font-family: verdana;
+    font-weight: bold;
+}
+/*Configurações do cabeçario*/
+
+
+/*Configurações do conteúdo*/
+
+section{
+    line-height: 2em;
+    padding: 10vh 0px 10vh 30px;
+    color:black;
+    font-family: sira;
+    font-size: 3.5vw;
+}
+section p{
+    padding-bottom: 2em;
+}
+.img{
+    background-color: black;
+    color: white;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    box-shadow: inset 10px 2px 20px #0000008f;
+}
+.esp{
+    background-color: #00000074;
+    display: inline-block;
+    padding: 10px;
+    text-shadow: 1px 1px 0px black;
+}
+section#img1{
+    background-position: right center;
+    background-image: url('../img/cisne.jpeg');
+}
+section#img2{
+    background-position:right top;
+    background-image: url('../img/mulher-lendo.jpg');
+}
+/*Configurações do conteúdo*/
+
+
+/*Configuração do rodapé*/
+footer{
+    background-color: black;
+    padding: 5px;
+    font-size: 14px;
+    margin-top: 50px;
+}
+footer p{
+    font-family: verdana;
+    color: gray;
+    text-align: center;
+    font-weight: normal;
+}
+footer a{
+    color: white;
+    font-weight: normal;
+}
+/*Configuração do rodapé*/
