@@ -1,23 +1,23 @@
 import  java.util.Scanner;
-public class Juro {
+public class Fees {
     public static void main(String[] args) {
 
         Scanner input=new Scanner(System.in);
 
-        double deposito, juro, value_rend, value_total;
+        double deposit, fees, value_rend, value_total;
         String name;
 
-        System.out.print("Informe por favor o seu nome: ");
+        System.out.print("\nInforme por favor o seu nome: ");
         name = input.next();
 
         System.out.print("Digite o valor do deposito: ");
-        deposito = input.nextDouble();
+        deposit = input.nextDouble();
 
-        System.out.print("Insire o número da taxa de juro: ");
-        juro = input.nextDouble();
+        System.out.print("Insire o valor da taxa de juro: ");
+        fees = input.nextDouble();
 
-        value_rend=(deposito+juro)-deposito;
-        value_total=deposito+juro;
+        value_rend=(deposit*(fees/100));
+        value_total=deposit*value_rend;
 
         System.out.println("\nResultados Obtidos:");
         System.out.println("Nome: "+name);

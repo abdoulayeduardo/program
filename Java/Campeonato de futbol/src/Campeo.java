@@ -5,7 +5,9 @@ public class Campeo {
         Scanner read=new Scanner(System.in);
 
         String name;
-        int old, mediOld=0,quantOld=0,quantJog=3,quantEq=2;
+        int old,quantOld=0,quantJog=3,quantEq=2;
+        int [] mediOld=new int[10];
+        int [] year=new int[10];
         double pes,altura,mediAltura=0,mediPes=0;
 
         for (int equi = 1; equi <=quantEq ; equi++) {
@@ -30,22 +32,27 @@ public class Campeo {
                     quantOld++;
                 }
                 mediAltura+=altura;
-                mediOld+=old;
+
                 if (pes>80) {
                     mediPes+=pes;
                 }
-                /*else if (old<1 || old>120) {
-                    System.out.println("[Error] Dado inválido! o "+jog+"º jogador não foi cadastrado\n");
-                }break;*/
+
+                year[jog]+=old;
+                mediOld[equi]=year[equi]/quantJog;
             }
 
         }
         System.out.println("\n");
         System.out.println("Quantidade de jogadores com as idades inferiores a 18: "+quantOld);
-        System.out.println("Média das idades dos jogadores: "+mediOld/(quantEq*quantJog));
         System.out.println("Média das alturas dos jogadores: "+mediAltura/(quantEq*quantJog));
-        System.out.println(mediPes*100+"% dos jogadores estão acima dos 80Kg");
+
+        for (int i = 0; i <quantEq ; i++) {
+            System.out.println("Média das idades do "+i+1+"º TIME: "+mediOld[i]);
+        }
+
+        System.out.println((mediPes/(quantEq*quantJog))*100+"% dos jogadores estão acima dos 80Kg");
         System.out.println("\n");
+
         read.close();
     }
 }
