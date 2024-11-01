@@ -15,12 +15,12 @@ public class Provincy {
         b) qual é a média de veículos nas cinco províncias juntas;
         c) qual é a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio.*/
 
-        int number_car=0, number_aci=0,opction=0;
+        int number_car=0, number_aci=0, option =0;
         int cont=1,indMax=0,indMin=0,carNumber=0;
         int aciNumber=0,numberProvincy=5;
         int [] id=new int[numberProvincy];
         int idProvincy;
-        String provincy;
+        String provincy="Olá";
 
         do {
             System.out.println("\nPROVINCIAS DE ANGOLA");
@@ -46,8 +46,8 @@ public class Provincy {
                     System.out.println("1) M E N U");
                     System.out.println("0) S A I R");
                     System.out.print("Escolha a sua opção: ");
-                    opcao=read.nextInt();
-                    while(opcao==2){
+                    option =read.nextInt();
+                    while(option ==2){
                         System.out.println("Números de veículos de paseio: "+number_car);
                         System.out.println("Número de acidentes de transito: "+number_aci);
                         System.out.println("\n1 - Alterar dados");
@@ -64,9 +64,9 @@ public class Provincy {
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
                             System.out.println("Escolha a sua opção: ");
-                            opcao=read.nextInt();
+                            option =read.nextInt();
                         }else{
-                            opcao=1;
+                            option =1;
                         }
                     }
                     break;
@@ -83,8 +83,8 @@ public class Provincy {
                     System.out.println("1) M E N U");
                     System.out.println("0) S A I R");
                     System.out.print("Escolha a sua opção: ");
-                    opcao=read.nextInt();
-                    while(opcao==2){
+                    option =read.nextInt();
+                    while(option ==2){
                         System.out.println("Números de veículos de paseio: "+number_car);
                         System.out.println("Número de acidentes de transito: "+number_aci);
                         System.out.println("\n1 - Alterar dados");
@@ -101,9 +101,9 @@ public class Provincy {
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
                             System.out.println("Escolha a sua opção: ");
-                            opcao=read.nextInt();
+                            option =read.nextInt();
                         }else{
-                            opcao=1;
+                            option =1;
                         }
                     }
                     break;
@@ -120,8 +120,8 @@ public class Provincy {
                     System.out.println("1) M E N U");
                     System.out.println("0) S A I R");
                     System.out.print("Escolha a sua opção: ");
-                    opcao=read.nextInt();
-                    while(opcao==2){
+                    option =read.nextInt();
+                    while(option ==2){
                         System.out.println("Números de veículos de paseio: "+number_car);
                         System.out.println("Número de acidentes de transito: "+number_aci);
                         System.out.println("\n1 - Alterar dados");
@@ -138,9 +138,9 @@ public class Provincy {
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
                             System.out.println("Escolha a sua opção: ");
-                            opcao=read.nextInt();
+                            option =read.nextInt();
                         }else{
-                            opcao=1;
+                            option =1;
                         }
                     }
                     break;
@@ -157,8 +157,8 @@ public class Provincy {
                     System.out.println("1) M E N U");
                     System.out.println("0) S A I R");
                     System.out.print("Escolha a sua opção: ");
-                    opcao=read.nextInt();
-                    while(opcao==2){
+                    option =read.nextInt();
+                    while(option ==2){
                         System.out.println("Números de veículos de paseio: "+number_car);
                         System.out.println("Número de acidentes de transito: "+number_aci);
                         System.out.println("\n1 - Alterar dados");
@@ -175,9 +175,9 @@ public class Provincy {
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
                             System.out.println("Escolha a sua opção: ");
-                            opcao=read.nextInt();
+                            option =read.nextInt();
                         }else{
-                            opcao=1;
+                            option =1;
                         }
                     }
                     break;
@@ -193,8 +193,8 @@ public class Provincy {
                     System.out.println("1) M E N U");
                     System.out.println("0) S A I R");
                     System.out.print("Escolha a sua opção: ");
-                    opcao=read.nextInt();
-                    while(opcao==2){
+                    option =read.nextInt();
+                    while(option ==2){
                         System.out.println("Números de veículos de paseio: "+number_car);
                         System.out.println("Número de acidentes de transito: "+number_aci);
                         System.out.println("\n1 - Alterar dados");
@@ -211,9 +211,9 @@ public class Provincy {
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
                             System.out.println("Escolha a sua opção: ");
-                            opcao=read.nextInt();
+                            option =read.nextInt();
                         }else{
-                            opcao=1;
+                            option =1;
                         }
                     }
                     break;
@@ -223,7 +223,7 @@ public class Provincy {
                     System.out.println("1) M E N U");
                     System.out.println("0) S A I R");
                     System.out.print("Escolha a sua opção: ");
-                    opcao=read.nextInt();
+                    option =read.nextInt();
                     break;
             }
             //contadores e tudo...
@@ -231,19 +231,28 @@ public class Provincy {
             if (number_car<2000) {
                 aciNumber+= number_aci;
             }
+
             carNumber+=number_car;
+
+            //falta olhar esse cod
             if (indMax<number_aci){
                 indMax= number_aci;
-            }if(indMin>number_aci){
+            }else if(indMin>number_aci){
                 indMin= number_aci;
             }
+            //falta olhar esse cod
+
             cont++;
             if (cont>5){
                 break;
             }
-        }while(opcao==1);
+            for (int i = 0; i <25 ; i++) {
+                System.out.println("");
+            }
+        }while(option ==1);
 
-        System.out.println("A Média de veículos de passeio nas cinco províncias juntas é: "+(carNumber/numberProvincy));
+        System.out.println("\n\nRESULTADO DA ESTATISTICA");
+        System.out.println("\nA Média de veículos de passeio nas cinco províncias juntas é: "+(carNumber/numberProvincy));
         System.out.println("A Média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio é: "+(aciNumber/numberProvincy));
         System.out.println(provincy+" corresponde a "+indMin+" acidentes, é a provincia com o menor índece de acidente");
         System.out.println(provincy+" corresponde a "+indMax+" acidentes, é a provincia com o maior índece de acidente");
