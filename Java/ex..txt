@@ -1,0 +1,120 @@
+Outro:
+        int num;
+
+        System.out.print("Digite um número: ");
+        number=input.nextInt();
+        for (int i = 1; i <=num ; i=i+2) {
+            System.out.println(i);
+        }
+
+1º
+        String name;
+        int year;
+
+        System.out.print("\nPor favor informe o seu nome: ");
+        name=input.next();
+        System.out.print("Agora, por favor informe a sua idade: ");
+        year=input.nextInt();
+        System.out.println("\nOlá senhor(a) "+name+"! informar que estas com "+year+" anos de idade!");
+
+2º
+	int number1,number2,sum,medium;
+
+        System.out.print("\nInsira o primeiro número: ");
+        number1=input.nextInt();
+        System.out.print("Insira o segundo número: ");
+        number2=input.nextInt();
+
+        sum=number1+number2;
+        medium=sum/numberIn;
+        System.out.println();
+        System.out.println("Resultados Obtidos:");
+        System.out.println("Média dos números: "+medium);
+        System.out.println("Soma dos números: "+sum);
+
+3º
+        String name;
+        double salary,newsalary;
+
+        System.out.print("\nPor favor informe o seu nome: ");
+        name=input.next();
+        System.out.print("Agora, por favor informe a sua idade: ");
+        salary=input.nextDouble();
+
+        if (salary <= 100000.00) {
+            //20%
+            newsalary=(salary*(20/100))+salary;
+
+            System.out.println("\nO seu salário é de "+newsalary+"0 KZ");
+
+        } else if (salary >= 100000.01 && salary <= 200000.00) {
+            //10%
+            newsalary=(salary*(20/100))+salary;
+
+            System.out.println("\nO seu salário é de "+newsalary+"0 KZ");
+            
+        } else if (salary > 200000.00) {
+            //5%
+            newsalary=(salary*(20/100))+salary;
+
+            System.out.println("\nO seu salário é de "+newsalary+"0 KZ");
+        } else if (salary<0) {
+            System.out.println("\nValor salarial inválido");
+        }
+
+4º
+        String name;
+        double mac,p2,p3,medium;
+
+        System.out.print("\nPor favor informe o nome do aluno: ");
+        name=input.next();
+        System.out.print("Abaixo, informe as notas do aluno: ");
+
+        System.out.print("Valor do MAC: ");
+        mac =input.nextInt();
+        while (mac <0){
+            System.out.print("Valor do MAC: ");
+            mac =input.nextInt();
+        }
+        System.out.print("Prova do professore: ");
+        p2=input.nextInt();
+        while (p2<0){
+            System.out.print("Valor do MAC: ");
+            mac =input.nextInt();
+        }
+        System.out.print("Prova do trimestral: ");
+        p3=input.nextInt();
+        while (p3<0){
+            System.out.print("Valor do MAC: ");
+            mac =input.nextInt();
+        }
+        medium=(mac+p2+p3)/3;
+        if (medium>=7) {
+            System.out.println("Aprovado");
+        } else if (medium >=5 && medium<=6.9) {
+            System.out.println("Recoperação");
+        } else if (medium<5) {
+            System.out.println("Reprovado");
+        }
+5º
+        int medium,number=0,cont=0,acu=0;
+        System.out.println("");
+        while (number>=0){
+            System.out.print("Insira um número: ");
+            number =input.nextInt();
+            cont++;
+            acu+=number;
+        }
+        medium=acu/cont;
+        System.out.println("\nForão inseridos "+cont+" números");
+        System.out.println("A média dos números é: "+medium);
+
+6º
+	int number;
+	System.out.print("Insira um número: ");
+        number =input.nextInt();
+
+        for (int i = 1; i <=10 ; i++) {
+            int mul=i*number;
+            System.out.println(number+" x "+i+" = "+mul);
+        }
