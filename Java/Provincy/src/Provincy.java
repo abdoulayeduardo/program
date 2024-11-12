@@ -16,10 +16,10 @@ public class Provincy {
         c) qual é a média de acidentes de trânsito nas cidades com menos de 2.000 veículos de passeio.*/
 
         //Contadores e Controladores
-        int loop=0, contCar=0, option=0, id;
+        int loop=0, contCar=0, option, id;
 
         //
-        int indMax=0, indMin=0, number_car=0;
+        int indMax=0, indMin, number_car=0;
         int aciNumber=0, carNumber=0;
         String pMax="",pMin="";
 
@@ -81,7 +81,7 @@ public class Provincy {
                         System.out.println("Número de acidentes de transito: "+number_aci[loop]);
                         System.out.println("\n1 - Alterar dados");
                         System.out.println("2 - Guardar dados");
-                        System.out.println("Escolha a sua opção: ");
+                        System.out.print("Escolha a sua opção: ");
                         int dados=read.nextInt();
                         if (dados==1){
                             System.out.print("Informe o número de veículos de passeio: ");
@@ -92,7 +92,7 @@ public class Provincy {
                             System.out.println("\n2) Verificar Dados");
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
-                            System.out.println("Escolha a sua opção: ");
+                            System.out.print("Escolha a sua opção: ");
                             option =read.nextInt();
                         }else{
                             option =1;
@@ -118,7 +118,7 @@ public class Provincy {
                         System.out.println("Número de acidentes de transito: "+number_aci[loop]);
                         System.out.println("\n1 - Alterar dados");
                         System.out.println("2 - Guardar dados");
-                        System.out.println("Escolha a sua opção: ");
+                        System.out.print("Escolha a sua opção: ");
                         int dados=read.nextInt();
                         if (dados==1){
                             System.out.print("Informe o número de veículos de passeio: ");
@@ -129,7 +129,7 @@ public class Provincy {
                             System.out.println("\n2) Verificar Dados");
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
-                            System.out.println("Escolha a sua opção: ");
+                            System.out.print("Escolha a sua opção: ");
                             option =read.nextInt();
                         }else{
                             option =1;
@@ -155,7 +155,7 @@ public class Provincy {
                         System.out.println("Número de acidentes de transito: "+number_aci[loop]);
                         System.out.println("\n1 - Alterar dados");
                         System.out.println("2 - Guardar dados");
-                        System.out.println("Escolha a sua opção: ");
+                        System.out.print("Escolha a sua opção: ");
                         int dados=read.nextInt();
                         if (dados==1){
                             System.out.print("Informe o número de veículos de passeio: ");
@@ -166,7 +166,7 @@ public class Provincy {
                             System.out.println("\n2) Verificar Dados");
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
-                            System.out.println("Escolha a sua opção: ");
+                            System.out.print("Escolha a sua opção: ");
                             option =read.nextInt();
                         }else{
                             option =1;
@@ -192,7 +192,7 @@ public class Provincy {
                         System.out.println("Número de acidentes de transito: "+number_aci[loop]);
                         System.out.println("\n1 - Alterar dados");
                         System.out.println("2 - Guardar dados");
-                        System.out.println("Escolha a sua opção: ");
+                        System.out.print("Escolha a sua opção: ");
                         int dados=read.nextInt();
                         if (dados==1){
                             System.out.print("Informe o número de veículos de passeio: ");
@@ -203,7 +203,7 @@ public class Provincy {
                             System.out.println("\n2) Verificar Dados");
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
-                            System.out.println("Escolha a sua opção: ");
+                            System.out.print("Escolha a sua opção: ");
                             option =read.nextInt();
                         }else{
                             option =1;
@@ -228,7 +228,7 @@ public class Provincy {
                         System.out.println("Número de acidentes de transito: "+number_aci[loop]);
                         System.out.println("\n1 - Alterar dados");
                         System.out.println("2 - Guardar dados");
-                        System.out.println("Escolha a sua opção: ");
+                        System.out.print("Escolha a sua opção: ");
                         int dados=read.nextInt();
                         if (dados==1){
                             System.out.print("Informe o número de veículos de passeio: ");
@@ -239,7 +239,7 @@ public class Provincy {
                             System.out.println("\n2) Verificar Dados");
                             System.out.println("1) M E N U");
                             System.out.println("0) S A I R");
-                            System.out.println("Escolha a sua opção: ");
+                            System.out.print("Escolha a sua opção: ");
                             option =read.nextInt();
                         }else{
                             option =1;
@@ -247,7 +247,7 @@ public class Provincy {
                     }
                     break;
                 default:
-                    System.out.println("\n[ERROR!] Opção inválida!");
+                    System.err.println("\n[ERROR!] Opção inválida!");
 
                     System.out.println("1) M E N U");
                     System.out.println("0) S A I R");
@@ -265,7 +265,7 @@ public class Provincy {
 
             carNumber+=number_car;
 
-            loop=loop+1;
+            loop++;
             if (loop>4){
                 break;
             }
@@ -276,19 +276,16 @@ public class Provincy {
 
         }while(option==1);
 
-        //Observação
+        //Maior e Menor indece de Tranzito
+        indMin=number_aci[0];
         for(int i=0;i<number_aci.length;i++){
-
-            //falta olhar esse cod
             if (indMax<number_aci[i]){
                 indMax= number_aci[i];
                 pMax=provincy[i];
-            }else if(indMin>number_aci[i]){
+            }if(indMin>number_aci[i]){
                 indMin= number_aci[i];
                 pMin=provincy[i];
             }
-            //falta olhar esse cod
-
         }
 
         System.out.println("\n\nRESULTADO DA ESTATISTICA");
