@@ -17,7 +17,7 @@ public class Nota {
         md=(note1+note2+note3)/3;
 
         if (note1<0 || note1>10 || note2<0 || note2>10 || note3<0 || note3>10) {
-            System.out.println("[Erro] nota inválida!");
+            System.err.println("[Erro] nota inválida!");
         }
         else {
             if (md<=3) {

@@ -16,7 +16,7 @@ public class Fees {
         System.out.print("Insire o valor da taxa de juro: ");
         fees = input.nextDouble();
 
-        value_rend=(deposit*(fees/100));
+        value_rend=(0);
         value_total=deposit*value_rend;
 
         System.out.println("\nResultados Obtidos:");

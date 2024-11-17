@@ -27,33 +27,52 @@ public class Fabriquestion {
         A fábrica possui 15 operários.
         */
 
-        int quantOp=3;
+        int quantOp=3, pecasTotal=0,numOpeMAxSalary=0,contH=0,pecHTotal=0,contM=0,pecMTotal=0,nOPe;
         int [] idOpe=new int[quantOp],pecasFab=new int[quantOp];
+
         double [] salary=new double[quantOp];
         double salaryTotal=0.0,mediaH=0,mediaM=0;
-        int pecasTotal=0,numOpeMAxSalary=0;
+
         String [] sexo=new String[quantOp];
 
-        System.out.println();
+        System.out.println("\n");
         for (int i = 1; i <=quantOp ; i++) {
-            System.out.print("Insira o número do operário: ");
-            idOpe[i]=input.nextInt();
-            System.out.print("Informe o número de peças fabricadas: ");
-            pecasFab[i]=input.nextInt();
-            System.out.print("Agora informe o seu sexo: ");
-            sexo[i]=input.next();
 
-            if (pecasFab[i]==30){
+            System.out.print("Insira o número do operário: ");
+            idOpe[i] = input.nextInt();
+            System.out.print("Informe o número de peças fabricadas no mês: ");
+            pecasFab[i] = input.nextInt();
+            System.out.print("Agora informe o seu sexo: ");
+            sexo[i] = input.next();
+            String sex=sexo[i].toUpperCase();
+
+            if (pecasFab[i] == 30) {
                 //Classe 1
                 //número de peças x (salario minimo)
-            }else if (pecasFab[i]>=31 && pecasFab[i]<=50) {
+            } else if (pecasFab[i] >= 31 && pecasFab[i] <= 50) {
                 //Classe 2
-                //número de peças x (salario minimo+3%)
-            } else if (pecasFab[i]>50) {
+                //número de peças x (salario minimo+(3% do salario mínimo))
+            } else if (pecasFab[i] > 50) {
                 //Classe 3
-                //número de peças x (salario minimo+5%)
+                //número de peças x (salario minimo+(5% do salario mínimo))
             }
-             salaryTotal+=salary[i];
+
+            salaryTotal += salary[i];
+            pecasTotal += pecasFab[i];
+
+            if (numOpeMAxSalary < salary[i]) {
+                numOpeMAxSalary = salary[i];
+                nOPe=idOpe[i];
+            }
+
+            if (sex == "M" || sex == "MASCULINO") {
+                contH++;
+                pecHTotal += pecasFab[i];
+            }
+            if (sex == "F" || sex == "FEMENINO") {
+                contM++;
+                pecMTotal += pecasFab[i];
+            }
         }
 
         for (int i = 1; i <=quantOp ; i++) {
@@ -61,9 +80,9 @@ public class Fabriquestion {
         }
         System.out.println("Total da folha de pagamento da fábrica: "+salaryTotal);
         System.out.println("Número total de peças fabricadas no mês: "+pecasTotal);
-        System.out.println("Média de peças fabricadas pelos homens: "+mediaH);
-        System.out.println("Média de peças fabricadas pelas mulheres: "+mediaM);
-        System.out.println("Número do operário ou operária de maior salário: "+numOpeMAxSalary);
+        System.out.println("Média de peças fabricadas pelos homens: "+(pecHTotal/contH));
+        System.out.println("Média de peças fabricadas pelas mulheres: "+(pecMTotal/contM));
+        System.out.println("Número do operário ou operária de maior salário: "+nOPe);
 
         input.close();
     }
